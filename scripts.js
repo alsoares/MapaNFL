@@ -63,7 +63,7 @@ var marker = new google.maps.Marker({
 
 function retornarTimes()
 {
-var url = 'http://feeds.nfl.com/feeds-rs/teams/2017.json';
+var url = 'https://feeds.nfl.com/feeds-rs/teams/2017.json';
 $.ajax({
       url: url, 
       type: 'GET',
@@ -80,22 +80,3 @@ $.ajax({
 }
 
 
-/*
-function PreencheLatitudelongitude(cidade){
-var key  = 'AIzaSyCLYBtLfJBStBP9qsVRK34263G95ZhWg0U';
-var url = 'https://maps.googleapis.com/maps/api/place/textsearch/json?query=' +cidade + '&key=' + key;
-    $.ajax({
-      url: url, 
-      type: 'GET',
-      async: false,
-      success: function(result){
-        localizacao = {
-              lat: result.results[0].geometry.location.lat,
-              lng: result.results[0].geometry.location.lng
-            };
-      }
-    });
-}
-
-*/
-    
